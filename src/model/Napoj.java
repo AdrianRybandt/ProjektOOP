@@ -3,23 +3,19 @@ package model;
 public class Napoj extends BasicData{
     private int iloscMl;
 
-    public int getIloscMl() {
-        return iloscMl;
-    }
+    private RodzajNapoju rodzajNapoju;
 
-    public void setIloscMl(int iloscMl) {
-        this.iloscMl = iloscMl;
-    }
-
-    public Napoj(String nazwa, float cena, int iloscMl)
+    public Napoj(String nazwa, RodzajNapoju rodzajNapoju, int iloscG)
     {
-        this.nazwa = nazwa;
-        this.cena = cena;
-        this.iloscMl = iloscMl;
+        this.setNazwa(nazwa);
+        this.setRodzajNapoju(rodzajNapoju);
+        this.setIloscG(iloscG);
     }
 
-    public Napoj()
-    {
-
+    public RodzajNapoju getRodzajNapoju() {
+        return rodzajNapoju;
+    }
+    public void setRodzajNapoju(RodzajNapoju rodzajNapoju) {
+        this.rodzajNapoju = rodzajNapoju;
     }
 }
